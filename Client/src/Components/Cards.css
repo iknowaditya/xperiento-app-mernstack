@@ -1,0 +1,19 @@
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon.liked {
+  fill: yellow;
+}
+
+.icon.disliked {
+  fill: red;
+}
+
+.icon.saved {
+  fill: yellow;
+}

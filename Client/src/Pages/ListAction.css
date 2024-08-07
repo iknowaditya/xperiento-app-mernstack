@@ -1,0 +1,27 @@
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.liked {
+  background-color: green;
+}
+
+.disliked {
+  background-color: red;
+}
+
+.card {
+  position: relative;
+  /* Your other card styles */
+}
+
+.actions {
+  /* Styles for the like/dislike buttons */
+}

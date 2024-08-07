@@ -1,0 +1,19 @@
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon.liked {
+  filter: hue-rotate(0deg); /* Adjust to the color you want */
+}
+
+.icon.disliked {
+  filter: hue-rotate(120deg); /* Adjust to the color you want */
+}
+
+.icon.saved {
+  filter: hue-rotate(240deg); /* Adjust to the color you want */
+}
