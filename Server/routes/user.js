@@ -18,7 +18,8 @@ const router = express.Router();
 // Middleware - plugin..
 router.use(
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "https://xperiento-app-frontend.onrender.com",
     credentials: true,
   })
 );
