@@ -19,7 +19,8 @@ const router = express.Router();
 router.use(
   cors({
     // origin: "http://localhost:5173",
-    origin: "https://xperiento-app-frontend.onrender.com",
+    // origin: "https://xperiento-app-frontend.onrender.com",
+    origin: "https://xperiento-app-frontend.vercel.app",
     credentials: true,
   })
 );
