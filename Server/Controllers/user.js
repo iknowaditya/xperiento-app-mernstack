@@ -179,19 +179,37 @@ async function handleLoginUserById(req, res) {
 }
 
 // Get user profile by ID
+// const handleUserProfileById = (req, res) => {
+//   const { token } = req.cookies;
+//   if (token) {
+//     jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
+//       if (err) {
+//         return res.status(401).json({ error: "first Unauthorized" });
+//       }
+//       return res.json(user);
+//     });
+//   } else {
+//     return res.status(401).json({ error: "second Unauthorized" });
+//   }
+// };
+
+// Get user profile by ID
 const handleUserProfileById = (req, res) => {
   const { token } = req.cookies;
-  if (token) {
-    jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
-      if (err) {
-        return res.status(401).json({ error: "first Unauthorized" });
-      }
-      return res.json(user);
-    });
-  } else {
+  if (!token) {
+    console.log("Token not found in cookies");
     return res.status(401).json({ error: "second Unauthorized" });
   }
+
+  jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
+    if (err) {
+      console.log("Token verification failed:", err);
+      return res.status(401).json({ error: "first Unauthorized" });
+    }
+    return res.json(user);
+  });
 };
+
 
 // Logout user
 const handleLogoutUserById = (req, res) => {
