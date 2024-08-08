@@ -184,12 +184,12 @@ const handleUserProfileById = (req, res) => {
   if (token) {
     jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
       if (err) {
-        return res.status(401).json({ error: "Unauthorized" });
+        return res.status(401).json({ error: "first Unauthorized" });
       }
       return res.json(user);
     });
   } else {
-    return res.status(401).json({ error: "Unauthorized" });
+    return res.status(401).json({ error: "second Unauthorized" });
   }
 };
 
