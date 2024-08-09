@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Cards from "../Components/Cards";
 import Header from "../Pages/Header";
+import Footer from "./Footer";
 import SeeMoreCards from "../Components/SeeMoreCards";
 import { cardData, newCardData } from "../Utils/cardData";
 import icon1 from "../assets/icon3.svg";
@@ -66,6 +67,7 @@ const Insights = () => {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 };
