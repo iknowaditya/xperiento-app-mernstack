@@ -33,14 +33,15 @@ export function UserContextProvider({ children }) {
     try {
       const { data } = await axios.get("/profile", { withCredentials: true });
       setUser(data);
+     console.log("Successfully fetched user data" )
     } catch (error) {
       console.error("Failed to fetch user data:", error);
-      // if (error.response && error.response.status === 401) {
-      //   console.error(
-      //     "Unauthorized access - token might be invalid or expired."
-      //   );
-      //   logout(); // Optionally log out the user if unauthorized
-      // }
+      if (error.response && error.response.status === 401) {
+        console.error(
+          "Unauthorized access - token might be invalid or expired."
+        );
+        logout(); // Optionally log out the user if unauthorized
+      }
     }
   };
 
