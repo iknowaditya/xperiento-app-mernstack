@@ -1,5 +1,5 @@
 
-# Xperiento MERN Stack Application
+# Xperiento: Smart Insights for Sales, Marketing, and Customer Satisfaction
 
 Xperiento is a mobile-first application designed to provide smart insights that help improve sales, marketing, customer retention, and customer satisfaction. Built using the MERN stack (MongoDB, Express, React, Node.js), Xperiento offers a robust user authentication system utilizing JWT tokens and Context API to manage state efficiently across the application.
 
