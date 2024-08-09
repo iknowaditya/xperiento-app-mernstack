@@ -55,33 +55,6 @@ Install my-project with npm
   cd my-project
 ```
     
-## API Reference
-
-#### Get all items
-
-```http
-  GET /profile
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /profile/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
 
 ## Authors
 
@@ -101,7 +74,7 @@ Takes two numbers and returns the sum.
 
 | Color       | Hex                                                                 |
 | ----------- | ------------------------------------------------------------------- |
-| Background  | ![#1A202C](https://via.placeholder.com/10/1A202C?text=+) #1A202C    |
+| Background  | ![#0a0a0a](https://via.placeholder.com/10/1A202C?text=+) #0a0a0a    |
 | Primary     | ![#eab308](https://via.placeholder.com/10/4A5568?text=+) #eab308    |
 | Secondary   | ![#0ea5e9](https://via.placeholder.com/10/CBD5E0?text=+) #0ea5e9    |
 | Text        | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF    |
