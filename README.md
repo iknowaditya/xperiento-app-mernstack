@@ -104,15 +104,18 @@ Install my-project with npm
 ![App Screenshot](![Screenshot 2024-08-08 141312](https://github.com/user-attachments/assets/3ef6a61f-631a-4e4f-be50-6dc14e07ea37)
 )
 
-## Usage/Examples
 
-```javascript
-import Component from 'my-project'
+## Usage
 
-function App() {
-  return <Component />
-}
-```
+- Login/Logout: Users can log in using their credentials. The app uses JWT tokens to handle authentication, ensuring secure access to protected routes.
+
+- User Profile: After logging in, users can view and manage their profiles.
+
+- Smart Insights: The app provides valuable insights to enhance business strategies.
+
+
+
+
 
 
 ## Environment Variables
