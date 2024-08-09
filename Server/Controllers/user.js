@@ -1,6 +1,7 @@
 const User = require("../models/user");
 const { hashPassword, comparePassword } = require("../helpers/auth");
 const jwt = require("jsonwebtoken");
+const { JWT_SECRET } = process.env;
 
 // Middleware for verifying user / checks if the user exists.
 async function verifyUser(req, res, next) {
@@ -194,19 +195,43 @@ async function handleLoginUserById(req, res) {
 // };
 
 // Get user profile by ID
+// const handleUserProfileById = (req, res) => {
+//   const { token } = req.cookies;
+//   if (!token) {
+//     console.log("Token not found in cookies");
+//     return res.status(401).json({ error: "second Unauthorized" });
+//   }
+
+//   jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
+//     if (err) {
+//       console.log("Token verification failed:", err);
+//       return res.status(401).json({ error: "first Unauthorized" });
+//     }
+//     return res.json(user);
+//   });
+// };
+
+// Get user profile by ID
 const handleUserProfileById = (req, res) => {
-  const { token } = req.cookies;
+  const token = req.headers.authorization?.split(' ')[1];
+
   if (!token) {
-    console.log("Token not found in cookies");
-    return res.status(401).json({ error: "second Unauthorized" });
+    return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
+  jwt.verify(token, JWT_SECRET, (err, decoded) => {
     if (err) {
-      console.log("Token verification failed:", err);
-      return res.status(401).json({ error: "first Unauthorized" });
+      console.error('JWT verification error:', err);
+      return res.status(401).json({ error: 'Unauthorized' });
     }
-    return res.json(user);
+    
+    // Optionally, you can fetch user data from your database using the decoded information
+    // Example:
+    // User.findById(decoded.userId)
+    //   .then(user => res.json(user))
+    //   .catch(error => res.status(500).json({ error: 'Internal server error' }));
+
+    return res.json(decoded);
   });
 };
 
