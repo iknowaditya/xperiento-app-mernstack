@@ -74,9 +74,9 @@ Install my-project with npm
 
 | Color       | Hex                                                                 |
 | ----------- | ------------------------------------------------------------------- |
-| Background  | ![#0a0a0a](https://via.placeholder.com/10/1A202C?text=+) #0a0a0a    |
-| Primary     | ![#eab308](https://via.placeholder.com/10/4A5568?text=+) #eab308    |
-| Secondary   | ![#0ea5e9](https://via.placeholder.com/10/CBD5E0?text=+) #0ea5e9    |
+| Background  | ![#0a0a0a](https://via.placeholder.com/10/0a0a0a?text=+) #0a0a0a    |
+| Primary     | ![#eab308](https://via.placeholder.com/10/eab308?text=+) #eab308    |
+| Secondary   | ![#0ea5e9](https://via.placeholder.com/10/0ea5e9?text=+) #0ea5e9    |
 | Text        | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF    |
 
 
