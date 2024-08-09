@@ -4,6 +4,7 @@ import icon1 from "../assets/icon3.svg";
 import icon2 from "../assets/icon4.svg";
 import { newCardData } from "../Utils/cardData";
 import SeeMoreCards from "../Components/SeeMoreCards";
+import Footer from "./Footer";
 
 function Bookmark() {
   return (
@@ -39,6 +40,7 @@ function Bookmark() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
