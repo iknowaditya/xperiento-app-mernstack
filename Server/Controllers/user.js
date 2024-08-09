@@ -179,37 +179,6 @@ async function handleLoginUserById(req, res) {
   }
 }
 
-// Get user profile by ID
-// const handleUserProfileById = (req, res) => {
-//   const { token } = req.cookies;
-//   if (token) {
-//     jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
-//       if (err) {
-//         return res.status(401).json({ error: "first Unauthorized" });
-//       }
-//       return res.json(user);
-//     });
-//   } else {
-//     return res.status(401).json({ error: "second Unauthorized" });
-//   }
-// };
-
-// Get user profile by ID
-// const handleUserProfileById = (req, res) => {
-//   const { token } = req.cookies;
-//   if (!token) {
-//     console.log("Token not found in cookies");
-//     return res.status(401).json({ error: "second Unauthorized" });
-//   }
-
-//   jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
-//     if (err) {
-//       console.log("Token verification failed:", err);
-//       return res.status(401).json({ error: "first Unauthorized" });
-//     }
-//     return res.json(user);
-//   });
-// };
 
 // Get user profile by ID
 const handleUserProfileById = (req, res) => {
@@ -224,12 +193,6 @@ const handleUserProfileById = (req, res) => {
       console.error('JWT verification error:', err);
       return res.status(401).json({ error: 'Unauthorized' });
     }
-    
-    // Optionally, you can fetch user data from your database using the decoded information
-    // Example:
-    // User.findById(decoded.userId)
-    //   .then(user => res.json(user))
-    //   .catch(error => res.status(500).json({ error: 'Internal server error' }));
 
     return res.json(decoded);
   });
