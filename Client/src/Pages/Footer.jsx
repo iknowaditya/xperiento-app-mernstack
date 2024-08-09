@@ -129,7 +129,7 @@ function Footer() {
         </div>
         <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-5 pt-7">
           <span className="text-sm font-normal text-gray-400">
-            <a href="https://pagedone.io/" className="">
+            <a href="#" className="">
               ©Xperiento
             </a>{" "}
             2024, All rights reserved.
