@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Cards from "../Components/Cards";
 import Header from "./Header";
+import Footer from "./Footer";
 import icon1 from "../assets/icon3.svg";
 import icon2 from "../assets/icon4.svg";
 
@@ -42,6 +43,7 @@ function ListAction({ likedCards = [] }) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
